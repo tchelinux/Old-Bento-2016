@@ -177,3 +177,15 @@ footer {
 a.apoio-logo.apoio-link:hover {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 1.15);
 }
+
+.schedule-time{
+  text-align:center;
+  color:#777;
+}
+.speaker{
+  display:block;
+  color:#555;
+}
+.schedule-tbl a:hover{
+  text-decoration:none;
+}
