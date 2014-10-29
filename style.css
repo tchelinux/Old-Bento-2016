@@ -99,13 +99,14 @@ h2.subtitle {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-	padding: 20px;
 }
 
 .schedule-tbl table {
 	border-collapse: collapse;
 	font-size: 1em;
 }
+
+.schedule-tbl table tr td, .schedule-tbl table tr th {border:1px solid #ddd;}
 
 #eventick{
 	border: 1px solid #CCC;
