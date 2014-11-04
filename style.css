@@ -190,3 +190,11 @@ a.apoio-logo.apoio-link:hover {
 .schedule-tbl a:hover{
   text-decoration:none;
 }
+
+.pos-mapa{
+  padding-top:30px;
+}
+
+.center{
+  text-align:center;
+}
