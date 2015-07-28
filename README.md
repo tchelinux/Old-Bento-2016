@@ -1,4 +1,4 @@
-TcheLinux Bento Gonçalves 2014
+TcheLinux Bento Gonçalves
 ============
 
 [bento.tchelinux.org](http://bento.tchelinux.org)
