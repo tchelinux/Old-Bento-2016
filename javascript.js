@@ -22,10 +22,10 @@ $('#footer-menu li a').on('click', function(event) {
 
 $('#buscar_caminho').on('click', function(e) {
     e.preventdefault()
-    if (navigator.geolocation) { 
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
 
-        var point = new google.maps.LatLng(position.coords.latitude, 
+        var point = new google.maps.LatLng(position.coords.latitude,
                                     position.coords.longitude);
         calcRoute(point);
         });
@@ -36,7 +36,7 @@ $('#buscar_caminho').on('click', function(e) {
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
-var ftec = new google.maps.LatLng(-29.16375, -51.52198);
+var ftec = new google.maps.LatLng(-29.1472527, -51.5217581);
 directionsDisplay = new google.maps.DirectionsRenderer();
 var mapOptions = {
   zoom:16,
@@ -89,7 +89,7 @@ google.maps.event.addListener(autocomplete, 'place_changed', function() {
 
 document.getElementById("search-route").addEventListener("keypress", function(e){
     if (e.keyCode == 13) {
-        calcRoute(); 
+        calcRoute();
         return false;
     }
 });
