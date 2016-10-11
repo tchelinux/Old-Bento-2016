@@ -1,533 +1,381 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TchêLinux Bento Gonçalves - 2016</title>
-        <meta charset="UTF-8">
+        <title>TchêLinux Bento Gonçalves 2016</title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-        <!-- Latest compiled and minified CSS -->
+        <!-- css -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <!-- Optional theme -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="style.css">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <style type="text/css">
-          html { height: 100% }
-          body { height: 100%; margin: 0; padding: 0 }
-          #map_canvas { height: 100% }
-        </style>
-
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places"></script>
     </head>
     <body>
+
+        <!-- nav -->
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-
                  <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">TchêLinux</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="main-navbar">
-                      <ul class="nav navbar-nav">
-                        <li style="display:none;"><a href="#sobre">Sobre</a></li>
-                        <li><a href="#inscricao">Inscrições</a></li>
-                        <li><a href="#programacao">Programação</a></li>
-                        <li><a href="#palestras">Palestras</a></li>
-                        <li><a href="#local">Local</a></li>
-                        <li><a href="#apoio">Apoio</a></li>
-                      </ul>
-                    </div><!-- /.navbar-collapse -->
-
-            </div>
-        </nav>
-        <header class="header">
-          <div class="wrapper">
-            <h1 class="logo-name">
-              <a class="logo-link" href="#" title="TchêLinux Bento Gonçalves" itemprop="name">TchêLinux <br/>Bento Gonçalves</a>
-            </h1>
-            <h2 class="tagline">Dia 22 de Outubro de 2016</h2>
-          </div>
-        </header>
-        <section id="sobre">
-            <div class ="container">
-            <h2 class="subtitle">Sobre</h2>
-            <p>O grupo de usuários de Software Livre TchêLinux, em parceria com a Universidade de Caxias do Sul - Câmpus de Bento Gonçalves (CARVI), tem o prazer de convidar a comunidade, independentemente do nível de conhecimento e experiência
-		com tecnologia, software livre e áreas afins, para participar da quarta edição do Seminário de
-		Tecnologia em Software Livre TchêLinux na cidade de Bento Gonçalves.
-            </p>
-            <p>
-                O evento precisou ser adiado, portanto a data e local ainda estão a ser definidos.
-            </p>
-            <h3>O que é?</h3>
-            <p>
-            	Este é um evento voltado para estudantes, profissionais e interessados em software livre, desenvolvimento e tecnologia.
-            	Sua finalidade é divulgar o Software Livre por meio de palestras e demonstrações práticas veiculadas de forma gratuita.
-            	Todos, com qualquer nível de conhecimentos, são bem-vindos.
-            </p>
-            </div>
-        </section>
-        <section id="inscricao">
-          <div class="container">
-            <h2 class="subtitle">Inscrições</h2>
-            <!--<p>
-                As inscrições para o evento serão iniciadas em breve.
-            </p>
-            <!--p>-->
-                <a target="_blank" href="https://docs.google.com/forms/d/18QpTQMMgvBkYkMBw3fd6Uamj9f5huVhdFfJkNK2coOM">Faça sua inscrição agora mesmo!</a>
-            </p>
-            <p>
-                A participação é gratuita, porém os participantes são incentivados a trazer 2kg de alimentos não perecíveis (exceto sal) que serão doados
-                para uma instituição a ser definida.
-                Os alimentos serão recebidos no momento do credenciamento.
-            </p>
-            <p>
-              Confirme presença no evento no Facebook
-              e ajude a divulgar! :)
-            </p>
-            <p style="text-align:center">
-              <br>
-              <a href="https://www.facebook.com/events/1616102282020700/" target="_blank">
-                <img src="./images/encontre_facebook.png">
-              </a>
-            </p>
-          </div>
-        </section>
-
-        <section id="programacao">
-        <div class="container">
-          <h2 class="subtitle">Programação</h2>
-          <p>
-              A grade de programação será preenchida a medida que as palestras forem confirmadas.
-          </p>
-          <p>
-              Horários de palestras podem ser alterados para acomodar restrições dos palestrantes.
-          </p>
-           <div class="schedule-tbl">
-              <table class="table table-responsive">
-                <thead>
-                  <tr>
-                    <th class="schedule-time" width="12%">Horário</th>
-                    <th class="schedule-slot" width="44%">Auditorio</th>
-                    <th class="schedule-empty" width="44%">Sala de Aula</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="schedule-other">
-                    <td class="schedule-time">09h00</td>
-                    <td class="schedule-slot" colspan="2">Recepção / Credenciamento / Coffe</td>
-                  </tr>
-
-                  <tr class="schedule-other">
-                    <td class="schedule-time">09h00</td>
-                    <td class="schedule-slot" colspan="2">Abertura</td>
-                  </tr>
-
-                  09h30
-                  <tr class="schedule-other">
-                    <td class="schedule-time">09h30</td>
-                    <td class="schedule-slot">
-                        <a href=#speech-1>
-                            <span class="description">
-                                Projeto Biblioteca Livre
-                            </span>
-                            <span class="speaker">Marcos Antonio Azambuja da Silva</span>
-                        </a>
-                    </td>
-                    <td class="schedule-slot">
-                        <a href=#speech-2>
-                            <span class="description">
-                                Introdução a criação de aplicações usando Laravel Framework
-                            </span>
-                            <span class="speaker">Roberto Soares de Carneiro</span>
-                        </a>
-                    </td>
-                  </tr>
-
-                  10h20
-                  <tr class="schedule-other">
-                    <td class="schedule-time">10h20</td>
-                    <td class="schedule-slot">
-                        <a href=#speech-3>
-                            <span class="description">
-                                Pare de ignorar o Git!
-                            </span>
-                            <span class="speaker">Giovanni Pires da Silva</span>
-                        </a>
-                    </td>
-                    <td class="schedule-slot">
-                        <a href=#speech-4>
-                            <span class="description">
-                                Android 101
-                            </span>
-                            <span class="speaker">Luiz Fernando Duarte</span>
-                        </a>
-                    </td>
-                  </tr>
-
-                  11h10
-                  <tr class="schedule-other">
-                    <td class="schedule-time">11h10</td>
-                    <td class="schedule-slot">
-                        <a href=#speech-5>
-                            <span class="description">
-                                Docker, Kubernetes & OpenShift - Welcome to the cloud
-                            </span>
-                            <span class="speaker">Mateus Caruccio</span>
-                        </a>
-                    </td>
-                    <td class="schedule-slot">
-                        <a href=#speech-6>
-                            <span class="description">
-                                Level up with Bash
-                            </span>
-                            <span class="speaker">Junior Jean Carlo Machado</span>
-                        </a>
-                    </td>
-                  </tr>
-
-                  Almoço
-                  <tr class="schedule-other">
-                    <td class="schedule-time">12h00</td>
-                    <td class="schedule-slot" colspan="2">Intervalo para almoço (12h às 13h30min)</td>
-                  </tr>
-                  <tr class="schedule-other">
-                    <td class="schedule-time">13h30</td>
-                    <td class="schedule-slot" colspan="2">Abertura das atividades na parte da tarde.</td>
-                  </tr>
-
-                  14h00
-                  <tr class="schedule-other">
-                    <td class="schedule-time">14h00</td>
-                    <td class="schedule-slot">
-                        <a href=#speech-7>
-                            <span class="description">
-                                Desenvolvimento de Jogos
-                            </span>
-                            <span class="speaker">Marcelo Fardo</span>
-                        </a>
-                    </td>
-                    <td class="schedule-slot">
-                        <a href=#speech-8>
-                            <span class="description">
-                                Use o GIMP!
-                            </span>
-                            <span class="speaker">Italo Avila</span>
-                        </a>
-                    </td>
-                  </tr>
-
-                  14h50
-
-                  Coffeebreak
-                  <tr class="schedule-other">
-                    <td class="schedule-time">14h50</td>
-                    <td class="schedule-slot" colspan="2">Coffeebreak e networking</td>
-                  </tr>
-
-                  15h10
-                  <tr class="schedule-other">
-                    <td class="schedule-time">15h10</td>
-                    <td class="schedule-slot">
-                        <a href=#speech-11>
-                            <span class="description">
-                                Batuca
-                            </span>
-                            <span class="speaker">Andre Lima</span>
-                        </a>
-                    </td>
-                    <td class="schedule-slot">
-                        <a href=#speech-12>
-                            <span class="description">
-                                Ransonware, seu dinheiro ou se dado
-                            </span>
-                            <span class="speaker">Luis Miguel</span>
-                        </a>
-                    </td>
-                  </tr>
-
-                  Encerramento
-                  <tr class="schedule-other">
-                    <td class="schedule-time">16h00</td>
-                    <td class="schedule-slot" colspan="2">Encerramento</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-        </section>
-        <section id="palestras">
-        <div class="container">
-          <h2 class="subtitle">Palestras</h2>
-
-          <p>
-              O período de envio de palestras foi finalizado.
-          </p>
-
-        <!--<p>Você pode <a href="https://goo.gl/forms/odZMd19RbS8JfY3f2">enviar sua palestra</a> até o dia 30 de Setembro de 2016.</p> -->
-
-           <div id="speech-1" class=speech-container>
-            <span class="speech-time">09h30</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Projeto Bilioteca Livre 2016
-                </h3>
-                <span class="speech-description">
-                    Apresentação do Software Biblivre Versão 4 como interface em projetos de inclusão digital e incentivo à leitura.<br>
-                    Trata-se de uma solução gratuita para gestão de acervos de bibliotecas escolares que vem sendo implantado desde 2013 nas escolas da região da 16º CRE - Coordenadoria Regional de Educação
-                </span>
-                <h3 class="speaker-name">Marcos Antonio Azambuja da Silva</h3>
-                <span class="speaker-bio">
-                    Graduado em Licenciatura plena em História - UCS/2012; Especialistas em Mídias na Educação - UFRGS/2015;<br>
-                    Professor no NTE - Núcleo de Tecnologia Educacional da 16ª CRE
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-2" class=speech-container>
-            <span class="speech-time">09h30</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                     Introdução a criação de aplicações usando Laravel Framework
-                </h3>
-                <span class="speech-description">
-                    Nesta palestra será apresentado as principais características do Framework Laravel, e também será mostrado, de uma forma simples, como criar uma simples aplicação.
-                </span>
-                <h3 class="speaker-name">Roberto Soares de Carneiro</h3>
-                <span class="speaker-bio">
-                    Formado Técnico em Informática pelo IFF, trabalho a 4 anos com desenvolvimento web front-end e back-end,  apaixonado por tecnologia,  atualmente responsável pelo setor de desenvolvimento da Devon Tecnologia.
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-3" class=speech-container>
-            <span class="speech-time">10h20</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Pare de ignorar o Git!
-                </h3>
-                <span class="speech-description">
-                    Estamos em 2016, e quase tudo que é projeto está no GitHub.
-                    Entretanto, você continua indo lá e "fazendo download".<br>
-                     Git é um dos controles de versão mais utilizados do mundo, é a porta de entrada para projetos open-source.
-                     Essa poderosa ferramenta tomou tanta importância que já chega a ser substituta ao currículo, para algumas empresas.
-                     Já tem até gente escrevendo TCC em Git. Vamos aprender o que é, como usá-lo, qual seu "basic workflow" (fluxo básico), e tudo mais que você precisar para usá-lo com segurança no seu dia-a-dia, você, sua empresa e/ou sua equipe. Aprenderá o essencial para tirar os pés do chão, nunca mais precisará "duplicar um arquivo" para "ter um backup". Saberá quando, onde, e o que foi feito, por quem, e a que hora. Seu projeto terá vida. <br>
-                     Daqui pra frente, você amará a ferramenta e utilizará Git "once and for all" (de uma vez por todas).
-                </span>
-                <h3 class="speaker-name">Giovanni Pires da Silva</h3>
-                <span class="speaker-bio">
-                    Giovanni é desenvolvedor web há mais de 15 anos, tendo passado por algumas agências da Serra Gaúcha.<br>
-                    Trabalhou como designer, front-end, back-end, "webmaster", "Flasheiro" e tudo e mais um pouco. Hoje é freelancer, investindo seu tempo na criação de mais uma empresa. Liderou equipes pequenas de desenvolvimento e tem um bocado de experiência pra contar. É apaixonado por Git e web em geral, participa e participou de uma pilha de eventos ao longo dos anos, palestrado em alguns localmente. Nesse ano, decidiu que compartilhará mais seus conhecimentos.
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-4" class=speech-container>
-            <span class="speech-time">10h20</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Android 101
-                </h3>
-                <span class="speech-description">
-                    Passo-a-passo de criação e publicação de um app Android na Google Play + sessão de perguntas e respostas, tudo em 40 minutos!
-                </span>
-                <h3 class="speaker-name">Leandro Luiz Lugaresi</h3>
-                <span class="speaker-bio">
-                    Graduado em Ciência da Computação e pós-graduado em Computação Móvel. Profissional de TI desde 2006, é gerente de projetos, professor do ensino superior e autor de livros sobre desenvolvimento de apps, fruto de suas experiências desenvolvendo apps para grandes marcas como LG, Renault, Ford e Emebelleze.
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-5" class=speech-container>
-            <span class="speech-time">11h10</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Auditório - Docker, Kubernetes & OpenShift - Welcome to the cloud
-                </h3>
-                <span class="speech-description">
-                    Na minha máquina funciona! Quem nunca ouviu, ou disse, essa frase?<br>
-                    Ambientes homogêneos, auto-scale, auto-recovery, deployment strategies... Diga oi pra nova geração da nuvem. Nessa palestra você vai conhecer de perto três projetos que estão mudando a forma como entregamos as aplicações.
-                </span>
-                <h3 class="speaker-name">Mateus Caruccio</h3>
-                <span class="speaker-bio">
-                    Desenvolvedor backend (e mais-ou-menos frontend), CTO e co-founder na GetupCloud - um PaaS brasileiro baseado em OpenShift/Kubernetes/Docker. Atuei em empresas de renome - e outras nem tanto - desenvolvendo sistemas de alta criticidade, escrevendo HTML e empacotando RPMs.<br>
-                    Atualmente mantenho o sistema de backend (django) e frontend (react) da Getup. Sou pai do Davi e dono de um gato preto caolho chamado Satanás.
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-6" class=speech-container>
-            <span class="speech-time">11h10</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Level up with Bash
-                </h3>
-                <span class="speech-description">
-                    Bash é uma ferramenta poderosa que muitos desenvolvedores utilizam diariamente de forma superficial. Seja para rodar o gerenciador de pacotes ou utilizar um sistema de controle de versão, dificilmente o desenvolvedor consegue escapar do terminal. Nesta palestra farei uma introdução às ferramentas comuns do Bash e abordarei alguns conceitos do Unix que podem levar sua experiência com o terminal para o próximo nível.
-                </span>
-                <h3 class="speaker-name">Jean Carlo Machado</h3>
-                <span class="speaker-bio">
-                    My name is Jean Carlo Machado. I’m a 23 years old, lead engineer at CompuFácil, a financial management startup that focuses on user experience and simplicity. I specially care about science and open-source. Currently I’m researching optimization based on nature inspired intelligence. I also enjoy the Unix way, functional programming, clean code and violin.
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-7" class=speech-container>
-            <span class="speech-time">14h00</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Inovação em Games
-                </h3>
-                <span class="speech-description">
-                    Descrição a preencher
-                </span>
-                <h3 class="speaker-name">Marcelo Fardo</h3>
-                <span class="speaker-bio">
-                    Descrição a preencher
-                </span>
-            </div>
-          </div>
-
-
-          <div id="speech-8" class=speech-container>
-            <span class="speech-time">14h00</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Use o GIMP!
-                </h3>
-                <span class="speech-description">
-                     Uma poderosa ferramenta de criação e manipulação de imagens!<br>
-                     Conheça alguns dos recursos do software, através de exemplos práticos e um workshop prático e completo.
-                </span>
-                <h3 class="speaker-name">Italo Ávilla</h3>
-                <span class="speaker-bio">
-                    Co-fundador da produtora Dose Extra Multimídia e designer com mais de seis anos de experiência.
-                </span>
-            </div>
-          </div>
-
-          <div id="speech-10" class=speech-container>
-            <span class="speech-time">14h50</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Coffeebreak e networking
-                </h3>
-                <span class="speech-description">
-                  Espaço aberto, sem palestra, para lightning talks, discussões e tema livre sobre open source.
-                </span>
-            </div>
-          </div>
-          <div id="speech-9" class=speech-container>
-            <span class="speech-time">15h10</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Keynote
-                </h3>
-                <span class="speech-description">
-                     Resolução de problemas, criatividade e processo criativo.
-                </span>
-                <h3 class="speaker-name">Andre Lima</h3>
-                <span class="speaker-bio">
-                    Descrição a preencher
-                </span>
-            </div>
-          </div>
-
-          <div id="speech-11" class=speech-container>
-            <span class="speech-time">15h10</span>
-            <div class="speech-info">
-                <h3 class="speech-title">
-                    Ransonware, seu dinheiro ou se dado
-                </h3>
-                <span class="speech-description">
-                    Irei abordar a história, como ele funciona e mostrarei códigos e exemplos na prática!
-                </span>
-                <h3 class="speaker-name">Márcio Torres</h3>
-                <span class="speaker-bio">
-                    Administrador de sistemas desde 2011, amplo conhecimento em diversas tecnologias em Windows server, certificado mcsa. Trabalhando hoje com foco em e-mail utilizando sistemas Linux(dovecot,sendmail,postfix,etc).
-                </span>
-            </div>
-          </div>
-
-
-
-
-          </div>
-        </section>
-        <section id="local">
-        <div class="container">
-          <h2 class="subtitle">Local</h2>
-          <p>
-            UCS - Câmpus de Bento Gonçalves(CARVI)
-          </p>
-          <p>
-			Alameda João Dal Sasso, 800 - Bairro Universitário
-          </p>
-          <p>
-			Bento Gonçalves - Rio Grande do Sul
-          </p>
-          <div id="map_canvas" style="width: 100%; height: 350px;"></div>
-          <input type="text" id="search-route" class="form-control" placeholder="Digite sua localização">
-          <div id="directions-panel"></div>
-          <div class="pos-mapa">
-            <p>O evento irá ocorrer no auditorio do bloco BJ, possuindo sinalização e recepção dos participantes.</p>
-            <p>Haverão também Food Trucks no pátio, nas proximidades do bloco de realização do evento.</p> <!--Food Trucks não é no plural? -->
-            <p class="center"><img src="./images/ucs.png" alt="FTEC" class="photo" /></p>
-          </div>
-        </div>
-        </section>
-        <section id="apoio">
-            <div class="container">
-                <h2 class="subtitle">Apoio:</h2>
-                <h4>Institucional</h4>
-                <ul class="apoio-list">
-                  <li class="apoio-item">
-                    <a href="http://ucs.br" title="Universidade de Caxias do Sul" target="_blank">
-                      <img src="./images/rodape.png" alt="Logo do UCS - Campus Bento Gonçalves" class="photo" width="100px" />
-                    </a>
-                  </li>
-                </ul>
-            </div>
-        </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline" id="footer-menu">
-                        <li class="active"><a href="#">TchêLinux</a></li>
-                        <li><a href="#programacao">Programação</a></li>
-                        <li><a href="#palestras">Palestras</a></li>
-                        <li><a href="#local">Local</a></li>
-                        <li><a href="#apoio">Apoio</a></li>
+                    </button>
+                    <a class="navbar-brand" data-toggle="scroll-smooth" href="#">TchêLinux</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a data-toggle="scroll-smooth" href="#inscricao">Inscrições</a></li>
+                        <li><a data-toggle="scroll-smooth" href="#programacao">Programação</a></li>
+                        <li><a data-toggle="scroll-smooth" href="#palestras">Palestras</a></li>
+                        <li><a data-toggle="scroll-smooth" href="#local">Local</a></li>
+                        <li><a data-toggle="scroll-smooth" href="#apoio">Apoio</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="github">
-                <a href="https://github.com/TcheLinux/bento" target="_blank">
-                    <img src="./images/GitHub-Mark-32px.png"/>
-                    <p class="copyright text-muted small">Acesse o TchêLinux Bento Gonçalves no GitHub</p>
-                </a>
+        </nav>
+
+        <!-- header -->
+        <header class="header">
+            <div class="wrapper">
+                <h1 class="logo-name">TchêLinux<br>
+                    Bento Gonçalves</h1>
+                <h2 class="header__date">Dia 22 de Outubro de 2016</h2>
             </div>
-        </div>
-    </footer>
-    <div style="display:none;">
-        <script type="text/javascript" src="javascript.js"></script>
+        </header>
+
+        <!-- sobre -->
+        <section class="section" id="sobre">
+            <div class="container">
+                <h2 class="subtitle">Sobre</h2>
+                <p>O grupo de usuários de Software Livre, <a href="//tchelinux.org" target="_blank">TchêLinux</a>, em parceria com a <a href="//www.ucs.br/">Universidade de Caxias do Sul</a> - Câmpus de Bento Gonçalves (CARVI), tem o prazer de convidar a comunidade, independentemente do nível de conhecimento e experiência com tecnologia, software livre e áreas afins, para participar da quarta edição do Seminário de Tecnologia em Software Livre TchêLinux na cidade de Bento Gonçalves.</p>
+                <h3>O que é?</h3>
+                <p>Este é um evento voltado para estudantes, profissionais da área, e interessados em software livre, desenvolvimento e tecnologia.<br>
+                	Sua finalidade é divulgar o Software Livre, por meio de palestras e demonstrações práticas veiculadas de forma gratuita.<br>
+                    Todos, com qualquer nível de conhecimentos, são bem-vindos. O evento não é somente para "usuários Linux".</p>
+            </div>
+        </section>
+
+        <!-- inscrições -->
+        <section class="section" id="inscricao">
+            <div class="container">
+                <h2 class="subtitle">Inscrições</h2>
+                <p>A participação é gratuita, porém os participantes são incentivados a trazer 2kg de alimentos não perecíveis (exceto sal) que serão doados para uma instituição escolhida pela organização do evento. Os alimentos serão recebidos no momento do credenciamento.</p>
+                <p style="margin-bottom: 20px">Confirme sua presença no <a href="https://www.facebook.com/events/1616102282020700/" target="_blank">evento no Facebook</a> e ajude a divulgá-lo para comunidade local e amigos! :)</p>
+                <p class="text-center"><a href="https://www.facebook.com/events/1616102282020700/" target="_blank">
+                    <img alt="Encontre-nos no Facebook" src="./images/encontre_facebook.png"></a></p>
+            </div>
+        </section>
+
+        <!-- programação -->
+        <section class="section" id="programacao">
+            <div class="container">
+                <h2 class="subtitle">Programação</h2>
+                <p><small>* Observação: os horários e as palestras podem sofrer alterações, de acordo a disponibilidade e restrições dos palestrantes.</small></p>
+                <div class="table-responsive">
+                    <table class="schedule-tbl table">
+                        <thead>
+                            <tr>
+                                <th class="schedule-time" width="12%">Horário</th>
+                                <th class="schedule-slot" width="44%">Espaço: Auditório</th>
+                                <th class="schedule-slot" width="44%">Espaço: Sala de Aula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="schedule-other info">
+                                <td class="schedule-time">09h00</td>
+                                <td class="schedule-slot" colspan="2">Recepção / Credenciamento / Coffe Break e Abertura</td>
+                            </tr>
+
+                            <tr class="schedule-other">
+                                <td class="schedule-time">09h30</td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-1">Projeto Biblioteca Livre</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-1">Marcos Antonio Azambuja da Silva</a>
+                                </td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-2">Introdução a criação de aplicações usando Laravel Framework</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-2">Roberto Soares de Carneiro</a>
+                                </td>
+                            </tr>
+
+                            <tr class="schedule-other">
+                                <td class="schedule-time">10h20</td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-3">Pare de ignorar o Git!</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-3">Giovanni Pires da Silva</a>
+                                </td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-4">Android 101</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-4">Luiz Fernando Duarte</a>
+                                </td>
+                            </tr>
+
+                            <tr class="schedule-other">
+                                <td class="schedule-time">11h10</td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-5">Docker, Kubernetes &amp; OpenShift - Welcome to the cloud</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-5">Mateus Caruccio</a>
+                                </td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-6">Level up with Bash</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-6">Junior Jean Carlo Machado</a>
+                                </td>
+                            </tr>
+
+                            <tr class="schedule-other info">
+                                <td class="schedule-time">12h00</td>
+                                <td class="schedule-slot" colspan="2">Intervalo para almoço</td>
+                            </tr>
+
+                            <tr class="schedule-other info">
+                                <td class="schedule-time">13h30</td>
+                                <td class="schedule-slot" colspan="2">Abertura das atividades na parte da tarde</td>
+                            </tr>
+
+                            <tr class="schedule-other">
+                                <td class="schedule-time">14h00</td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-7">Inovação em Games</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-7">Marcelo Fardo</a>
+                                </td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-8">Use o GIMP!</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-8">Italo Avila</a>
+                                </td>
+                            </tr>
+
+                            <tr class="schedule-other info">
+                                <td class="schedule-time">14h50</td>
+                                <td class="schedule-slot" colspan="2">Coffeebreak e networking</td>
+                            </tr>
+
+                            <tr class="schedule-other">
+                                <td class="schedule-time">15h10</td>
+                                <td class="schedule-slot">
+                                    A definir
+                                    <!-- <a class="description" data-toggle="scroll-smooth" href="#speech-9">A definir</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-9">A definir</a> -->
+                                </td>
+                                <td class="schedule-slot">
+                                    <a class="description" data-toggle="scroll-smooth" href="#speech-10">Ransonware, seu dinheiro ou se dado</a><br>
+                                    <a class="speaker" data-toggle="scroll-smooth" href="#speaker-10">Luis Miguel</a>
+                                </td>
+                            </tr>
+
+                            <tr class="schedule-other info">
+                                <td class="schedule-time">16h00</td>
+                                <td class="schedule-slot" colspan="2">Encerramento</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- palestras -->
+        <section class="section" id="palestras">
+            <div class="container">
+                <h2 class="subtitle">Palestras</h2>
+
+                <div id="speech-1" class="speech-container">
+                    <span class="speech-time">09h30</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Projeto Bilioteca Livre 2016</h3>
+                        <p class="speech-description">Apresentação do Software Biblivre Versão 4 como interface em projetos de inclusão digital e incentivo à leitura. Trata-se de uma solução gratuita para gestão de acervos de bibliotecas escolares que vem sendo implantado desde 2013 nas escolas da região da 16º CRE - Coordenadoria Regional de Educação</p>
+                        <div class="speaker-container" id="speaker-1">
+                            <h4 class="speaker-name">Marcos Antonio Azambuja da Silva</h4>
+                            <p class="speaker-bio">Graduado em Licenciatura plena em História - UCS/2012; Especialistas em Mídias na Educação - UFRGS/2015;<br>
+                                Professor no NTE - Núcleo de Tecnologia Educacional da 16ª CRE
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-2" class="speech-container">
+                    <span class="speech-time">09h30</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Introdução a criação de aplicações usando Laravel Framework</h3>
+                        <p class="speech-description">Nesta palestra será apresentado as principais características do Framework Laravel, e também será mostrado, de uma forma simples, como criar uma simples aplicação.</p>
+                        <div class="speaker-container" id="speaker-2">
+                            <h4 class="speaker-name">Roberto Soares de Carneiro</h4>
+                            <p class="speaker-bio">Formado Técnico em Informática pelo IFF, trabalho a 4 anos com desenvolvimento web front-end e back-end,  apaixonado por tecnologia,  atualmente responsável pelo setor de desenvolvimento da Devon Tecnologia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-3" class="speech-container">
+                    <span class="speech-time">10h20</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Pare de ignorar o Git!</h3>
+                        <p class="speech-description">Estamos em 2016, e quase tudo que é projeto está no GitHub. Entretanto, você continua indo lá e "fazendo download". Git é um dos controles de versão mais utilizados do mundo, é a porta de entrada para projetos open-source. Essa poderosa ferramenta tomou tanta importância que já chega a ser substituta ao currículo, para algumas empresas. Já tem até gente escrevendo TCC em Git. Vamos aprender o que é, como usá-lo, qual seu "basic workflow" (fluxo básico), e tudo mais que você precisar para usá-lo com segurança no seu dia-a-dia, você, sua empresa e/ou sua equipe. Aprenderá o essencial para tirar os pés do chão, nunca mais precisará "duplicar um arquivo" para "ter um backup". Saberá quando, onde, e o que foi feito, por quem, e a que hora. Seu projeto terá vida. Daqui pra frente, você amará a ferramenta e utilizará Git "once and for all" (de uma vez por todas).</p>
+                        <div class="speaker-container" id="speaker-3">
+                            <h4 class="speaker-name">Giovanni Pires da Silva</h4>
+                            <p class="speaker-bio">Giovanni é desenvolvedor web há mais de 15 anos, tendo passado por algumas agências da Serra Gaúcha. Trabalhou como designer, front-end, back-end, "webmaster", "Flasheiro" e tudo e mais um pouco. Hoje é freelancer, investindo seu tempo na criação de mais uma empresa. Liderou equipes pequenas de desenvolvimento e tem um bocado de experiência pra contar. É apaixonado por Git e web em geral, participa e participou de uma pilha de eventos ao longo dos anos, palestrado em alguns localmente. Nesse ano, decidiu que compartilhará mais seus conhecimentos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-4" class="speech-container">
+                    <span class="speech-time">10h20</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Android 101</h3>
+                        <p class="speech-description">Passo-a-passo de criação e publicação de um app Android na Google Play + sessão de perguntas e respostas, tudo em 40 minutos!</p>
+                        <div class="speaker-container" id="speaker-4">
+                            <h4 class="speaker-name">Luiz Fernando Duarte Junior</h4>
+                            <p class="speaker-bio">Graduado em Ciência da Computação e pós-graduado em Computação Móvel. Profissional de TI desde 2006, é gerente de projetos, professor do ensino superior e autor de livros sobre desenvolvimento de apps, fruto de suas experiências desenvolvendo apps para grandes marcas como LG, Renault, Ford e Emebelleze.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-5" class="speech-container">
+                    <span class="speech-time">11h10</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Auditório - Docker, Kubernetes &amp; OpenShift - Welcome to the cloud</h3>
+                        <p class="speech-description">Na minha máquina funciona! Quem nunca ouviu, ou disse, essa frase? Ambientes homogêneos, auto-scale, auto-recovery, deployment strategies... Diga oi pra nova geração da nuvem. Nessa palestra você vai conhecer de perto três projetos que estão mudando a forma como entregamos as aplicações.</p>
+                        <div class="speaker-container" id="speaker-5">
+                            <h4 class="speaker-name">Mateus Caruccio</h4>
+                            <p class="speaker-bio">Desenvolvedor backend (e mais-ou-menos frontend), CTO e co-founder na GetupCloud - um PaaS brasileiro baseado em OpenShift/Kubernetes/Docker. Atuei em empresas de renome - e outras nem tanto - desenvolvendo sistemas de alta criticidade, escrevendo HTML e empacotando RPMs. Atualmente mantenho o sistema de backend (django) e frontend (react) da Getup. Sou pai do Davi e dono de um gato preto caolho chamado Satanás.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-6" class="speech-container">
+                    <span class="speech-time">11h10</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Level up with Bash</h3>
+                        <p class="speech-description">Bash é uma ferramenta poderosa que muitos desenvolvedores utilizam diariamente de forma superficial. Seja para rodar o gerenciador de pacotes ou utilizar um sistema de controle de versão, dificilmente o desenvolvedor consegue escapar do terminal. Nesta palestra farei uma introdução às ferramentas comuns do Bash e abordarei alguns conceitos do Unix que podem levar sua experiência com o terminal para o próximo nível.</p>
+                        <div class="speaker-container" id="speaker-6">
+                            <h4 class="speaker-name">Jean Carlo Machado</h4>
+                            <p class="speaker-bio">My name is Jean Carlo Machado. I’m a 23 years old, lead engineer at CompuFácil, a financial management startup that focuses on user experience and simplicity. I specially care about science and open-source. Currently I’m researching optimization based on nature inspired intelligence. I also enjoy the Unix way, functional programming, clean code and violin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-7" class="speech-container">
+                    <span class="speech-time">14h00</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Inovação em Games</h3>
+                        <!-- <p class="speech-description">Descrição a preencher</p> -->
+                        <div class="speaker-container" id="speaker-7">
+                            <h4 class="speaker-name">Marcelo Fardo</h4>
+                            <!-- <p class="speaker-bio">Descrição a preencher</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-8" class="speech-container">
+                    <span class="speech-time">14h00</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Use o GIMP!</h3>
+                        <p class="speech-description">Uma poderosa ferramenta de criação e manipulação de imagens! Conheça alguns dos recursos do software, através de exemplos práticos e um workshop prático e completo.</p>
+                        <div class="speaker-container" id="speaker-8">
+                            <h4 class="speaker-name">Italo Ávilla</h4>
+                            <p class="speaker-bio">Co-fundador da produtora Dose Extra Multimídia e designer com mais de seis anos de experiência.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="speech-9" class="speech-container">
+                    <span class="speech-time">15h10</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">A definir</h3>
+                        <!-- <p class="speech-description">A preencher</p> -->
+                        <!-- <div class="speaker-container" id="speaker-9">
+                            <h4 class="speaker-name">A definir</h4>
+                            <p class="speaker-bio">Descrição a preencher</p>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div id="speech-10" class="speech-container">
+                    <span class="speech-time">15h10</span>
+                    <div class="speech-info">
+                        <h3 class="speech-title">Ransonware, seu dinheiro ou se dado</h3>
+                        <p class="speech-description">Irei abordar a história, como ele funciona e mostrarei códigos e exemplos na prática!</p>
+                        <div class="speaker-container" id="speaker-10">
+                            <h4 class="speaker-name">Márcio Torres</h4>
+                            <p class="speaker-bio">Administrador de sistemas desde 2011, amplo conhecimento em diversas tecnologias em Windows server, certificado mcsa. Trabalhando hoje com foco em e-mail utilizando sistemas Linux (dovecot, sendmail, postfix, etc.).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- local -->
+        <section class="section local" id="local">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="subtitle">Local</h2>
+                    <div class="local__address">
+                        <p>UCS - Câmpus de Bento Gonçalves(CARVI)<br>
+                            Alameda João Dal Sasso, 800 - Bairro Universitário<br>
+                            Bento Gonçalves - Rio Grande do Sul</p>
+                    </div>
+                </div>
+                <div class="map-canvas" id="map_canvas"></div>
+                <input type="text" id="search-route" class="form-control" placeholder="Digite sua localização">
+                <div id="directions-panel"></div>
+                <div class="pos-mapa">
+                    <p>O evento irá ocorrer no auditório do bloco BJ, possuindo sinalização e recepção dos participantes.</p>
+                    <p>Haverão também Food Trucks no pátio, nas proximidades do bloco de realização do evento.</p>
+                    <p class="center local__img"><img src="./images/ucs.png" alt="UCS" class="photo" /></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- apoio -->
+        <section class="section text-center" id="apoio">
+            <div class="container">
+                <h2 class="subtitle">Apoio:</h2>
+                <ul class="apoio-list">
+                    <li class="apoio-item">
+                        <a href="http://www.ucs.br" title="Universidade de Caxias do Sul" target="_blank">
+                            <img src="./images/rodape.png" alt="Logo do UCS - Campus Bento Gonçalves" class="photo" width="100" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer text-center">
+            <div class="container">
+
+                <!-- menu -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-inline footer-menu" id="footer-menu">
+                            <li class="active"><a data-toggle="scroll-smooth" href="#">TchêLinux</a></li>
+                            <li><a data-toggle="scroll-smooth" href="#programacao">Programação</a></li>
+                            <li><a data-toggle="scroll-smooth" href="#palestras">Palestras</a></li>
+                            <li><a data-toggle="scroll-smooth" href="#local">Local</a></li>
+                            <li><a data-toggle="scroll-smooth" href="#apoio">Apoio</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- github -->
+                <div class="github text-center">
+                    <a href="https://github.com/TcheLinux/bento" target="_blank">
+                        <img src="./images/GitHub-Mark-32px.png"><br>
+                        <span class="copyright text-muted small text-center">Acesse o TchêLinux Bento Gonçalves no GitHub</span>
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- js -->
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.min.js"></script>
-    </div>
+        <script type="text/javascript" src="javascript.js"></script>
+
     </body>
 </html>
