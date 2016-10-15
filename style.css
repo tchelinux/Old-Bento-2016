@@ -71,9 +71,6 @@ p {
     font-size: 14px;
     margin-bottom: 0;
 }
-.navbar-default {
-    background-image: linear-gradient(to bottom, #F8F8F8 0px, #DDD 90%);
-}
 .header {
     color: #fff;
     overflow: hidden;
@@ -263,12 +260,26 @@ a.apoio-logo.apoio-link:hover {
 }
 
 /* mobile only */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin-bottom: 0;
+    }
+    .navbar-btn {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
     .logo-name {
         font-size: 2em;
         letter-spacing: -0.04em;
     }
     .header__date {
         font-size: 1.5em;
+    }
+}
+
+/* tablet up */
+@media (min-width: 768px) {
+    .navbar-btn {
+        float: right;
     }
 }
