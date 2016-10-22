@@ -177,6 +177,8 @@ h2.subtitle {
 
 /* apoio*/
 .apoio-list {
+    display: flex;
+    justify-content: center;
     margin-bottom: 45px;
     padding-left: 0;
 }
@@ -185,6 +187,9 @@ h2.subtitle {
     display: flex;
     height: 101px;
     justify-content: center;
+}
+.apoio-item + .apoio-item {
+    margin-left: 50px;
 }
 
 /* footer */
