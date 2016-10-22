@@ -144,6 +144,10 @@ h2.subtitle {
 .local__address {
     margin-bottom: 30px;
 }
+.local h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
 #search-route {
     width: 100%;
     margin: auto;
@@ -168,15 +172,6 @@ h2.subtitle {
     border-radius: 4px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
     height: 350px;
-    width: 100%;
-}
-.pos-mapa {
-  padding-top: 60px;
-}
-.local__img {
-    margin-top: 30px;
-}
-.local__img img {
     width: 100%;
 }
 
