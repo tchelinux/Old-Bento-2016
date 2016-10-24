@@ -15,59 +15,54 @@ $(function() {
 
     $('[data-toggle="scroll-smooth"]').on('click', scrollSmooth);
 
+    //map
     $('#buscar_caminho').on('click', function(e) {
-        e.preventdefault()
+        e.preventdefault();
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-
-            var point = new google.maps.LatLng(position.coords.latitude,
-                                        position.coords.longitude);
-            calcRoute(point);
+                var point = new google.maps.LatLng(position.coords.latitude,
+                                                   position.coords.longitude);
+                calcRoute(point);
             });
         }
     });
-
-    //map
-    var directionsDisplay;
+    var map_canvas = document.getElementById('map_canvas');
+    var directionsDisplay = new google.maps.DirectionsRenderer();
     var directionsService = new google.maps.DirectionsService();
-    var map;
-    var ftec = new google.maps.LatLng(-29.1472527, -51.5217581);
-    directionsDisplay = new google.maps.DirectionsRenderer();
+    var event_location = new google.maps.LatLng(map_canvas.getAttribute('data-latitude'), map_canvas.getAttribute('data-longitude'));
     var mapOptions = {
-      zoom:16,
-      center: ftec,
-      streetViewControl: false,
-      panControl: true,
-      overviewMapControl: true,
-      zoomControl: true,
-      scaleControl: true
+        zoom: 16,
+        center: event_location,
+        streetViewControl: false,
+        panControl: true,
+        overviewMapControl: true,
+        zoomControl: true,
+        scaleControl: true
     }
-    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-    directionsDisplay = new google.maps.DirectionsRenderer();
+    var map = new google.maps.Map(map_canvas, mapOptions);
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById('directions-panel'));
     var marker = new google.maps.Marker({
-                  position: ftec,
-                  map: map,
-                  title:"FTEC Caxias do Sul"
+        position: event_location,
+        map: map,
+        title: map_canvas.getAttribute('data-location-name')
     });
 
     function calcRoute(starte) {
-      var start = document.getElementById("search-route").value;
-      if(starte != undefined) {
-        start = starte;
-      }
-      var end = ftec;
-      var request = {
-          origin:start,
-          destination:end,
-          travelMode: google.maps.TravelMode.DRIVING
-      };
-      directionsService.route(request, function(response, status) {
-      if (status == google.maps.DirectionsStatus.OK) {
-        directionsDisplay.setDirections(response);
-      }
-      });
+        var start = document.getElementById("search-route").value;
+        if (starte != undefined) {
+            start = starte;
+        }
+        var request = {
+            origin:start,
+            destination: event_location,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+            }
+        });
     }
 
     autocomplete = new google.maps.places.Autocomplete(
@@ -76,7 +71,7 @@ $(function() {
     // When the user selects an address from the dropdown,
     // populate the address fields in the form.
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
-      calcRoute();
+        calcRoute();
     });
 
     document.getElementById("search-route").addEventListener("keypress", function(e){

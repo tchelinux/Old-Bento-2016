@@ -379,14 +379,19 @@
                     <li>E na <strong>Sala CD340 do Bloco C/D</strong>.</li>
                 </ol>
                 <p>Notificamos a todos que, infelizmente, não conseguimos trazer os food trucks que gostaríamos para o evento, mas mesmo assim, haverá almoço para os participantes no refeitório da universidade, com desconto especial para os credenciados.</p>
+
+                <!-- mapa de espaços -->
                 <h3>Mapa dos Espaços</h3>
                 <div class="mapa-de-espacos">
                     <img alt="Mapa de Espaços" class="img-responsive" height="600" src="./images/mapa-de-espacos.jpg" width="1140">
                 </div>
+
+                <!-- mapa de localização -->
                 <h3>Mapa de Localização</h3>
-                <div class="map-canvas" id="map_canvas"></div>
+                <div class="map-canvas" data-latitude="-29.1472527" data-longitude="-51.5217581" data-location-name="UCS Bento Gonçalves (CARVI)" id="map_canvas"></div>
                 <input type="text" id="search-route" class="form-control" placeholder="Digite sua localização">
                 <div id="directions-panel"></div>
+
             </div>
         </section>
 
@@ -459,9 +464,14 @@
         <!-- js -->
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places"></script>
+
+        <!-- atualize essa chave (key) pra sua aplicação: -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyBKW5WRGI-ZdqoXDvwnN_nVQueNYbbxotw&amp;libraries=places"></script>
+
         <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/scrollspy.min.js"></script>
         <script src="javascript.js"></script>
+
+        <!-- atualize essa chave para sua aplicação: -->
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
